@@ -1,0 +1,398 @@
+/* Global */
+:root {
+  /* Color */
+  --color-dark-grey: #404040;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Font size */
+  --font-large: 48px;
+  --font-medium: 28px;
+  --font-regular: 18px;
+  --font-small: 16px;
+  --font-micro: 14px;
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  /* Size */
+  --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 300ms;
+
+  font-family: 'Playfair Display', serif;
+}
+
+/* Universal tags */
+* {
+  box-sizing: border-box;
+  top: 0;
+}
+
+/* Typography */
+
+body {
+  margin: 0;
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+ul {
+  list-style: none;
+  color: var(--color-black);
+  padding-left: 0;
+}
+
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0;
+}
+
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 8px 0;
+}
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 4px 0;
+}
+
+.brunch__icon {
+  width: 30px;
+  height: 30px;
+}
+
+.instar__icon {
+  position: relative;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+}
+
+section {
+  padding-top: 40px;
+}
+/* Navbar */
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-dark-grey);
+  /* background-color: transparent; */
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  padding: 8px;
+  position: fixed;
+  transition: all var(--animation-duration) ease-in-out;
+  z-index: 2;
+}
+
+#navbar.navbar--dark {
+  background-color: var(--color-dark-grey);
+  padding: 8px;
+}
+
+.navbar__menu {
+  display: flex;
+  margin: 0px 10px;
+  color: var(--color-white);
+}
+
+.navbar__logo {
+  margin-left: 50px;
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+}
+
+.navbar__menu__item {
+  padding: 8px, 12px;
+  margin: 0px 50px;
+  cursor: pointer;
+  border-radius: var(--size-border-radius);
+  border: 1px solid transparent;
+}
+
+.navbar__menu__item:hover {
+  background-color: var(--color-black);
+  /* border: 1px solid var(--color-white); */
+}
+
+.navbar__menu__item {
+  padding: 10px;
+}
+
+.navbar__sns {
+  color: var(--color-white);
+}
+
+.navbar__sns a {
+  margin-right: 20px;
+}
+
+.navbar__sns img:hover {
+  transform: scale(1.3);
+  animation-duration: all var(--animation-duration) ease-in;
+}
+
+.navbar__toggle-btn {
+  position: absolute;
+  top: 24px;
+  right: 38px;
+  font-size: 24px;
+  display: none;
+}
+
+/* About */
+#about {
+  padding-top: 0px;
+}
+
+.about__container {
+  height: 100vh;
+  width: auto;
+  position: relative;
+}
+
+.about__container::before {
+  content: '';
+  background: url('img/about/about_img.jpg') center/cover no-repeat;
+  opacity: 1;
+  position: absolute;
+  top: -10px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: 0;
+  padding: 0;
+}
+
+.about__textBox {
+  position: relative;
+  top: 300px;
+  padding-left: 50px;
+}
+
+.about__discription {
+  color: var(--color-white);
+}
+
+.about__link {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+/* product */
+#product {
+  background: url('img/product/product_img.jpg') center/cover no-repeat;
+  height: 700px;
+  overflow: hidden;
+}
+
+.product__container {
+  position: relative;
+  top: 100px;
+  left: 50px;
+}
+
+.product__title {
+  color: var(--color-white);
+}
+
+.product__discription {
+  color: var(--color-white);
+}
+
+/* Contents */
+
+.contents__discription {
+  margin-left: 50px;
+}
+
+.contents__discription > h3 {
+  text-decoration: underline;
+}
+
+.contents__magazines {
+  width: auto;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+  margin: 50px 50px;
+}
+
+.contents__slide {
+  /* display: flex; */
+  position: absolute;
+  left: 00;
+  top: 0;
+  width: 2500px;
+  transition: left 0.5s ease-out;
+}
+
+.contents__slide > div:first-child {
+  margin-left: 70px;
+}
+
+.contents__slide > div:not(:last-child) {
+  float: left;
+  margin-right: 100px;
+}
+
+.contents__slide > div {
+  float: left;
+}
+
+.controller span {
+  position: absolute;
+  background-color: transparent;
+  color: var(--color-black);
+  text-align: center;
+  border-radius: 50%;
+  padding: 10px 20px;
+  top: 30%;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.controller span:hover {
+  background-color: var(--color-dark-grey);
+}
+
+.prev {
+  left: 10px;
+}
+
+.prev:hover {
+  transform: translateX(-10px);
+}
+
+.next {
+  right: 10px;
+}
+
+.next:hover {
+  transform: translateX(10px);
+}
+
+.magazine__photo img {
+  height: auto;
+  max-width: 300px;
+  border: 1px solid var(--color-black);
+}
+
+.magazine__contents {
+  text-align: center;
+}
+
+.magazine__link {
+  color: var(--color-black);
+  text-decoration: underline;
+  text-underline-offset: 8px;
+}
+
+/* Contact */
+#contact {
+  height: 300px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.contact__upper {
+  margin-left: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact__icon {
+  margin-top: 30px;
+}
+
+.contact__icon a {
+  margin-right: 30px;
+}
+
+.contact__icon img:hover {
+  transform: scale(1.3);
+  animation-duration: all var(--animation-duration) ease-in;
+}
+
+.contact__title {
+  color: var(--color-white);
+  letter-spacing: 2px;
+}
+
+.contact__lower {
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-bottom: 40px;
+  display: flex;
+}
+
+.contact__sub {
+  color: var(--color-white);
+  margin: 0px;
+}
+
+.contact__num {
+  margin: 0px 50px;
+  color: var(--color-white);
+}
+
+.copyright > p {
+  color: var(--color-white);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Scroll
+.arrow-up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 70px;
+  height: 70px;
+  font-size: 50px;
+  background-color: var(--color-dark-grey);
+  color: var(--color-white);
+  border-radius: 50%;
+} */
+
+/* For bleow 768px screen width */
+/* @media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+  }
+
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    display: none;
+  } */
+}
