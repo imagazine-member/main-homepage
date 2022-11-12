@@ -4,6 +4,7 @@
   --color-dark-grey: #404040;
   --color-white: #ffffff;
   --color-black: #000000;
+  --color-beige: #fff8dc;
 
   /* Font size */
   --font-large: 48px;
@@ -256,7 +257,7 @@ section {
 
 .contents__slide > div:not(:last-child) {
   float: left;
-  margin-right: 100px;
+  margin-right: 95px;
 }
 
 .contents__slide > div {
@@ -276,15 +277,15 @@ section {
 }
 
 .controller span:hover {
-  background-color: var(--color-dark-grey);
+  background-color: var(--color-beige);
 }
 
 .prev {
-  left: 10px;
+  left: -5px;
 }
 
 .prev:hover {
-  transform: translateX(-10px);
+  transform: translateX(0px);
 }
 
 .next {
@@ -292,7 +293,7 @@ section {
 }
 
 .next:hover {
-  transform: translateX(10px);
+  transform: translateX(0x);
 }
 
 .magazine__photo img {
@@ -379,8 +380,8 @@ section {
 } */
 
 /* For bleow 768px screen width */
-/* @media screen and (max-width: 768px) {
-  .navbar__toggle-btn {
+@media screen and (max-width: 768px) {
+  /* .navbar__toggle-btn {
     display: block;
   }
 
