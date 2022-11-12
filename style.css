@@ -98,7 +98,8 @@ section {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-dark-grey);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(30px);
   /* background-color: transparent; */
   position: fixed;
   width: 100%;
@@ -109,10 +110,10 @@ section {
   z-index: 2;
 }
 
-#navbar.navbar--dark {
+/* #navbar.navbar--dark {
   background-color: var(--color-dark-grey);
   padding: 8px;
-}
+} */
 
 .navbar__menu {
   display: flex;
