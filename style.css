@@ -242,6 +242,11 @@ section {
   justify-content: center;
 }
 
+.contents__slide__row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .magazine {
   margin-top: 50px;
   margin-right: 80px;
@@ -261,6 +266,33 @@ section {
   color: var(--color-black);
   text-decoration: underline;
   text-underline-offset: 8px;
+}
+.magazine__visiblity {
+  display: none;
+}
+
+.selectedRow {
+  animation-duration: all var(--animation-duration) ease-in;
+}
+
+.dotController {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.slideBtn {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  background-color: var(--color-white);
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.slideBtn-dark {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Contact */

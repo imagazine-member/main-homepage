@@ -28,6 +28,34 @@ function scrollIntoView(selector) {
     scrollTo.scrollIntoView({behavior: "smooth"});
 }
 
+// Handle magazine slide when tapping on the button
+const magazineSlide = document.querySelector('.dotController');
+magazineSlide.addEventListener('click', (event) => {
+    const target = event.target;
+    const row = target.dataset.row;
+    if(row ==null) {
+        return;
+    }
+    moveSlide(row, target)
+
+})
+
+function moveSlide(row, target) {
+    const selectedRow = document.querySelector(`.magazine__row__${row}`);
+    const prevSelectedRow =document.querySelector('.selectedRow');
+    const prevBtn = document.querySelector('.slideBtn-dark');
+        
+    prevBtn.classList.remove('slideBtn-dark');
+    target.classList.add('slideBtn-dark');
+    prevSelectedRow.classList.remove('selectedRow');
+    prevSelectedRow.classList.add('magazine__visiblity');
+   
+    selectedRow.classList.add('selectedRow');
+    selectedRow.classList.remove('magazine__visiblity');
+}
+
+
+
 //Make home slowly fade to transparent as the window scrolls down
 // const about = document.querySelector('.about__textBox');
 // const aboutHeight = about.getBoundingClientRect().height;
