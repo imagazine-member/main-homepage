@@ -63,7 +63,6 @@ prev.addEventListener('click', () => {
 
 next.addEventListener('click', () => {
     const magazineCnt = document.querySelectorAll('.magazine').length;
-    console.log(magazineCnt, currentIdx);
     if(currentIdx>=magazineCnt-1){
         return;
     }
