@@ -28,32 +28,6 @@ function scrollIntoView(selector) {
     scrollTo.scrollIntoView({behavior: "smooth"});
 }
 
-// Handle magazine slide when tapping on the button
-const magazineSlide = document.querySelector('.dotController');
-magazineSlide.addEventListener('click', (event) => {
-    const target = event.target;
-    const row = target.dataset.row;
-    if(row ==null) {
-        return;
-    }
-    moveSlide(row, target)
-
-})
-
-function moveSlide(row, target) {
-    const selectedRow = document.querySelector(`.magazine__row__${row}`);
-    const prevSelectedRow =document.querySelector('.selectedRow');
-    const prevBtn = document.querySelector('.slideBtn-dark');
-        
-    prevBtn.classList.remove('slideBtn-dark');
-    target.classList.add('slideBtn-dark');
-    prevSelectedRow.classList.remove('selectedRow');
-    prevSelectedRow.classList.add('magazine__visiblity');
-   
-    selectedRow.classList.add('selectedRow');
-    selectedRow.classList.remove('magazine__visiblity');
-}
-
 
 
 //Make home slowly fade to transparent as the window scrolls down
@@ -64,31 +38,36 @@ function moveSlide(row, target) {
 // })
 
 
-//slide format
-// const slides = document.querySelector('.contents__slide');
-// const slideImg = document.querySelectorAll('.contents__slide div');
-// let currentIdx = 0;
-// const slideCount = slideImg.length;
-// const prev = document.querySelector('.prev');
-// const next = document.querySelector('.next');
-// const slideWidth = 300;
-// const slideMargin = 100;
+// slide format
+const slides = document.querySelector('.contents__slide');
+const slideImg = document.querySelectorAll('.contents__slide div');
+let currentIdx = 0;
+const slideCount = slideImg.length;
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+const slideWidth = 300;
+const slideMargin = 100;
 
-// slides.style.width = (slideWidth + slideMargin) * slideCount + 'px';
+slides.style.width = (slideWidth + slideMargin) * slideCount + 'px';
 
-// function moveSlide(num) {
-//     slides.style.left = -num * 400 + 'px';
-//     currentIdx = num;
-// }
+function moveSlide(num) {
+    slides.style.left = -num * 400 + 'px';
+    currentIdx = num;
+}
 
-// prev.addEventListener('click', () => {
-//     if(currentIdx !==0) {
-//         moveSlide(currentIdx-1);
-//     }
-// });
+prev.addEventListener('click', () => {
+    if(currentIdx !==0) {
+        moveSlide(currentIdx-1);
+    }
+});
 
-// next.addEventListener('click', () => {
-//     if(currentIdx !== slideCount -1) {
-//         moveSlide(currentIdx +1);
-//     }
-// })
+next.addEventListener('click', () => {
+    const magazineCnt = document.querySelectorAll('.magazine').length;
+    console.log(magazineCnt, currentIdx);
+    if(currentIdx>=magazineCnt-1){
+        return;
+    }
+    if(currentIdx !== slideCount -1) {
+        moveSlide(currentIdx +1);
+    }
+})
