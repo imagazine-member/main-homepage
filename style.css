@@ -195,7 +195,7 @@ section {
   padding-left: 50px;
 }
 
-.about__discription {
+.about__description {
   color: var(--color-white);
 }
 
@@ -221,16 +221,16 @@ section {
   color: var(--color-white);
 }
 
-.product__discription {
+.product__description {
   color: var(--color-white);
 }
 
 /* Contents */
-.contents__discription {
+.contents__description {
   margin-left: 50px;
 }
 
-.contents__discription > h3 {
+.contents__description > h3 {
   text-decoration: underline;
 }
 
