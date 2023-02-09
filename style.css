@@ -321,8 +321,11 @@ section {
   font-size: var(--font-regular);
 }
 
-.register__interview: :hover {
-  background-color: var(--color-black);
+.register__interview:hover {
+  background-color: var(--color-dark-grey);
+  cursor: pointer;
+  color: var(--color-white);
+  transition-duration: 0.5s;
 }
 
 /* Contact */
