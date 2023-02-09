@@ -311,6 +311,20 @@ section {
   text-decoration: underline;
   text-underline-offset: 8px;
 }
+
+/* regiser interview */
+.register__interview {
+  border-radius: 10px;
+  padding: 10px;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-size: var(--font-regular);
+}
+
+.register__interview: :hover {
+  background-color: var(--color-black);
+}
+
 /* Contact */
 #contact {
   height: 300px;

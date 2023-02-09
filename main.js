@@ -69,4 +69,10 @@ next.addEventListener('click', () => {
     if(currentIdx !== slideCount -1) {
         moveSlide(currentIdx +1);
     }
-})
+});
+
+
+const btnRegister = document.querySelector('.register__interview');
+btnRegister.addEventListener('click', () => {
+    window.open("https://tally.so/r/mDqgoR","_blank");
+});
